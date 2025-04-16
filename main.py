@@ -1,7 +1,9 @@
 from fastapi import FastAPI
-from .app.lifespan import lifespan
-from .app.routes import router
-from .config import settings
+from app.lifespan import lifespan
+from app.routes import router
+from config import settings
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI(
     title="Async RAG Service",
